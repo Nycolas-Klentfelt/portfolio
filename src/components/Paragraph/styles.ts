@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 import { Props } from '.'
 
+import { Theme } from './../../Themes/dark'
+
 export const P = styled.p<Props>`
   font-size: ${(props) => (props.fontSize ? props.fontSize + 'px' : '14px')};
   color: ${(props) =>
     props.tipo === 'principal'
-      ? props.theme.corPrincipal
-      : props.theme.corSecundaria};
+      ? (props.theme as Theme).corPrincipal
+      : (props.theme as Theme).corSecundaria};
   line-height: 22px;
 `
