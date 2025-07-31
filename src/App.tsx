@@ -1,12 +1,15 @@
+import { ThemeProvider } from 'styled-components'
+
 import EstiloGlobal from './styles'
 import Sidebar from './containers/Sidebar/index'
 import Projects from './containers/Projects'
 import About from './containers/About'
 import { Container } from './styles'
+import temaLight from './Themes/light'
 
 function App() {
   return (
-    <>
+    <ThemeProvider theme={temaLight}>
       <EstiloGlobal />
       <Container>
         <Sidebar />
@@ -15,7 +18,7 @@ function App() {
           <Projects />
         </main>
       </Container>
-    </>
+    </ThemeProvider>
   )
 }
 
