@@ -1,12 +1,14 @@
 import Paragraph from '../Paragraph'
 import Title from '../Title'
+import { Card, LinkBtn } from './styles'
 
 const Project = () => {
   return (
-    <div>
+    <Card>
       <Title>Projeto Lista de tarefas</Title>
-      <Paragraph>Lista de tarefas feita com VueJS</Paragraph>
-    </div>
+      <Paragraph tipo="secundario">Lista de tarefas feita com VueJS</Paragraph>
+      <LinkBtn>Visualizar</LinkBtn>
+    </Card>
   )
 }
 
